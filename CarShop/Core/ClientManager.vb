@@ -2,10 +2,11 @@
 Imports System.Text.RegularExpressions
 
 Public Class ClientManager
+    Private _ClientFile As String = "client.txt"
     Public Sub SaveClient(ByRef client As Client)
         client.ClientNumber = GenerateClientNumber(client.Surname)
         Dim fileWriter As StreamWriter
-        fileWriter = New StreamWriter("client.txt", True)
+        fileWriter = New StreamWriter(_ClientFile, True)
         fileWriter.WriteLine(client.ToString())
         fileWriter.Close()
     End Sub
@@ -19,12 +20,12 @@ Public Class ClientManager
         Return clientNumber
     End Function
 
-    Private Shared Function ReadMaxNumberFromFile() As Integer
+    Private Function ReadMaxNumberFromFile() As Integer
         Dim num As Int32 = 0
         'get max id
-        If (File.Exists("client.txt")) Then
+        If (File.Exists(_ClientFile)) Then
             Dim fileReader As StreamReader
-            fileReader = New StreamReader("client.txt")
+            fileReader = New StreamReader(_ClientFile)
             Dim line As String = ""
             Do While fileReader.Peek() <> -1 ' Loop until the end of the file is reached
                 line = fileReader.ReadLine()
@@ -42,23 +43,8 @@ Public Class ClientManager
     End Function
 
     Public Function CheckForNumeric(contactNumber As String) As Boolean
-        Dim i As Integer
-        Dim thisChar As Char
-        Dim asciiValue As Integer
-        Dim isValid As Boolean
-        isValid = True
-        For i = 0 To Len(contactNumber) - 1
-            thisChar = contactNumber.Chars(i)
-            asciiValue = Convert.ToByte(thisChar)
-            If asciiValue < 48 Then isValid = False
-            If asciiValue > 57 Then isValid = False
-        Next i
-        If isValid Then
-            Return True
-        Else
-            Return False
-        End If
-        Throw New NotImplementedException()
+        Dim validator = New NumberValidator
+        Return validator.CheckForNumeric(contactNumber)
     End Function
 
     Public Function ValidateEmail(email As String) As Boolean

@@ -193,7 +193,7 @@ Partial Class NewClientForm
         '
         Me.Button1.Location = New System.Drawing.Point(479, 353)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(225, 23)
+        Me.Button1.Size = New System.Drawing.Size(225, 29)
         Me.Button1.TabIndex = 17
         Me.Button1.Text = "Add new Client"
         Me.Button1.UseVisualStyleBackColor = True
@@ -223,7 +223,6 @@ Partial Class NewClientForm
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "NewClientForm"
         Me.Text = "New Client"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
