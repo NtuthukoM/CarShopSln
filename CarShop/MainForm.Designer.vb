@@ -28,15 +28,18 @@ Partial Class MainForm
         Me.NewClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FinanceCalculatorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisplayPreviousQuotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'StatusStrip1
         '
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 428)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 424)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(800, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(800, 26)
         Me.StatusStrip1.TabIndex = 1
         Me.StatusStrip1.Text = "Copyright (C) 2023"
         '
@@ -46,7 +49,7 @@ Partial Class MainForm
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 30)
         Me.MenuStrip1.TabIndex = 2
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -75,6 +78,12 @@ Partial Class MainForm
         Me.DisplayPreviousQuotesToolStripMenuItem.Size = New System.Drawing.Size(251, 26)
         Me.DisplayPreviousQuotesToolStripMenuItem.Text = "Display Previous Quotes"
         '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(131, 20)
+        Me.ToolStripStatusLabel1.Text = "Copyright (c) 2023"
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -88,6 +97,8 @@ Partial Class MainForm
         Me.Name = "MainForm"
         Me.Text = "Bobby's Car Shop"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -101,4 +112,5 @@ Partial Class MainForm
     Friend WithEvents NewClientToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FinanceCalculatorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DisplayPreviousQuotesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
 End Class
