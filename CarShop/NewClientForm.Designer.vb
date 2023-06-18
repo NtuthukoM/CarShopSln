@@ -24,21 +24,21 @@ Partial Class NewClientForm
     Private Sub InitializeComponent()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
         Me.lblClientNumber = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtContactNumber = New System.Windows.Forms.TextBox()
+        Me.lblContactNumber = New System.Windows.Forms.Label()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.lblEmail = New System.Windows.Forms.Label()
+        Me.txtDateOfBirth = New System.Windows.Forms.TextBox()
+        Me.lblDateOfBirth = New System.Windows.Forms.Label()
+        Me.txtPassportNumber = New System.Windows.Forms.TextBox()
+        Me.lblPassportNumber = New System.Windows.Forms.Label()
+        Me.txtIdNumber = New System.Windows.Forms.TextBox()
+        Me.lblIdNumber = New System.Windows.Forms.Label()
+        Me.txtSurname = New System.Windows.Forms.TextBox()
+        Me.lblSurname = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -61,14 +61,14 @@ Partial Class NewClientForm
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Client Number"
         '
-        'Label2
+        'lblName
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(277, 75)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 16)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Name"
+        Me.lblName.AutoSize = True
+        Me.lblName.Location = New System.Drawing.Point(277, 75)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(44, 16)
+        Me.lblName.TabIndex = 2
+        Me.lblName.Text = "Name"
         '
         'lblClientNumber
         '
@@ -82,105 +82,112 @@ Partial Class NewClientForm
         'txtName
         '
         Me.txtName.Location = New System.Drawing.Point(479, 75)
+        Me.txtName.MaxLength = 300
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(225, 22)
-        Me.txtName.TabIndex = 4
+        Me.txtName.TabIndex = 20
         '
-        'TextBox2
+        'txtContactNumber
         '
-        Me.TextBox2.Location = New System.Drawing.Point(479, 303)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(225, 22)
-        Me.TextBox2.TabIndex = 6
+        Me.txtContactNumber.Location = New System.Drawing.Point(479, 303)
+        Me.txtContactNumber.MaxLength = 15
+        Me.txtContactNumber.Name = "txtContactNumber"
+        Me.txtContactNumber.Size = New System.Drawing.Size(225, 22)
+        Me.txtContactNumber.TabIndex = 26
         '
-        'Label3
+        'lblContactNumber
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(277, 303)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(100, 16)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Contact number"
+        Me.lblContactNumber.AutoSize = True
+        Me.lblContactNumber.Location = New System.Drawing.Point(277, 303)
+        Me.lblContactNumber.Name = "lblContactNumber"
+        Me.lblContactNumber.Size = New System.Drawing.Size(100, 16)
+        Me.lblContactNumber.TabIndex = 5
+        Me.lblContactNumber.Text = "Contact number"
         '
-        'TextBox3
+        'txtEmail
         '
-        Me.TextBox3.Location = New System.Drawing.Point(479, 266)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(225, 22)
-        Me.TextBox3.TabIndex = 8
+        Me.txtEmail.Location = New System.Drawing.Point(479, 266)
+        Me.txtEmail.MaxLength = 200
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(225, 22)
+        Me.txtEmail.TabIndex = 25
         '
-        'Label4
+        'lblEmail
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(277, 266)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(41, 16)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Email"
+        Me.lblEmail.AutoSize = True
+        Me.lblEmail.Location = New System.Drawing.Point(277, 266)
+        Me.lblEmail.Name = "lblEmail"
+        Me.lblEmail.Size = New System.Drawing.Size(41, 16)
+        Me.lblEmail.TabIndex = 7
+        Me.lblEmail.Text = "Email"
         '
-        'TextBox4
+        'txtDateOfBirth
         '
-        Me.TextBox4.Location = New System.Drawing.Point(479, 227)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(225, 22)
-        Me.TextBox4.TabIndex = 10
+        Me.txtDateOfBirth.Location = New System.Drawing.Point(479, 227)
+        Me.txtDateOfBirth.MaxLength = 20
+        Me.txtDateOfBirth.Name = "txtDateOfBirth"
+        Me.txtDateOfBirth.Size = New System.Drawing.Size(225, 22)
+        Me.txtDateOfBirth.TabIndex = 24
         '
-        'Label5
+        'lblDateOfBirth
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(277, 227)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(78, 16)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = "Date of birth"
+        Me.lblDateOfBirth.AutoSize = True
+        Me.lblDateOfBirth.Location = New System.Drawing.Point(277, 227)
+        Me.lblDateOfBirth.Name = "lblDateOfBirth"
+        Me.lblDateOfBirth.Size = New System.Drawing.Size(78, 16)
+        Me.lblDateOfBirth.TabIndex = 9
+        Me.lblDateOfBirth.Text = "Date of birth"
         '
-        'TextBox5
+        'txtPassportNumber
         '
-        Me.TextBox5.Location = New System.Drawing.Point(479, 190)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(225, 22)
-        Me.TextBox5.TabIndex = 12
+        Me.txtPassportNumber.Location = New System.Drawing.Point(479, 190)
+        Me.txtPassportNumber.MaxLength = 20
+        Me.txtPassportNumber.Name = "txtPassportNumber"
+        Me.txtPassportNumber.Size = New System.Drawing.Size(225, 22)
+        Me.txtPassportNumber.TabIndex = 23
         '
-        'Label6
+        'lblPassportNumber
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(277, 190)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(61, 16)
-        Me.Label6.TabIndex = 11
-        Me.Label6.Text = "Passport"
+        Me.lblPassportNumber.AutoSize = True
+        Me.lblPassportNumber.Location = New System.Drawing.Point(277, 190)
+        Me.lblPassportNumber.Name = "lblPassportNumber"
+        Me.lblPassportNumber.Size = New System.Drawing.Size(61, 16)
+        Me.lblPassportNumber.TabIndex = 11
+        Me.lblPassportNumber.Text = "Passport"
         '
-        'TextBox6
+        'txtIdNumber
         '
-        Me.TextBox6.Location = New System.Drawing.Point(479, 152)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(225, 22)
-        Me.TextBox6.TabIndex = 14
+        Me.txtIdNumber.Location = New System.Drawing.Point(479, 152)
+        Me.txtIdNumber.MaxLength = 13
+        Me.txtIdNumber.Name = "txtIdNumber"
+        Me.txtIdNumber.Size = New System.Drawing.Size(225, 22)
+        Me.txtIdNumber.TabIndex = 22
         '
-        'Label7
+        'lblIdNumber
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(277, 152)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(92, 16)
-        Me.Label7.TabIndex = 13
-        Me.Label7.Text = "SA ID Number"
+        Me.lblIdNumber.AutoSize = True
+        Me.lblIdNumber.Location = New System.Drawing.Point(277, 152)
+        Me.lblIdNumber.Name = "lblIdNumber"
+        Me.lblIdNumber.Size = New System.Drawing.Size(92, 16)
+        Me.lblIdNumber.TabIndex = 13
+        Me.lblIdNumber.Text = "SA ID Number"
         '
-        'TextBox7
+        'txtSurname
         '
-        Me.TextBox7.Location = New System.Drawing.Point(479, 113)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(225, 22)
-        Me.TextBox7.TabIndex = 16
+        Me.txtSurname.Location = New System.Drawing.Point(479, 113)
+        Me.txtSurname.MaxLength = 300
+        Me.txtSurname.Name = "txtSurname"
+        Me.txtSurname.Size = New System.Drawing.Size(225, 22)
+        Me.txtSurname.TabIndex = 21
         '
-        'Label8
+        'lblSurname
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(277, 113)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(61, 16)
-        Me.Label8.TabIndex = 15
-        Me.Label8.Text = "Surname"
+        Me.lblSurname.AutoSize = True
+        Me.lblSurname.Location = New System.Drawing.Point(277, 113)
+        Me.lblSurname.Name = "lblSurname"
+        Me.lblSurname.Size = New System.Drawing.Size(61, 16)
+        Me.lblSurname.TabIndex = 15
+        Me.lblSurname.Text = "Surname"
         '
         'Button1
         '
@@ -195,27 +202,28 @@ Partial Class NewClientForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(809, 556)
+        Me.ClientSize = New System.Drawing.Size(871, 603)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.txtSurname)
+        Me.Controls.Add(Me.lblSurname)
+        Me.Controls.Add(Me.txtIdNumber)
+        Me.Controls.Add(Me.lblIdNumber)
+        Me.Controls.Add(Me.txtPassportNumber)
+        Me.Controls.Add(Me.lblPassportNumber)
+        Me.Controls.Add(Me.txtDateOfBirth)
+        Me.Controls.Add(Me.lblDateOfBirth)
+        Me.Controls.Add(Me.txtEmail)
+        Me.Controls.Add(Me.lblEmail)
+        Me.Controls.Add(Me.txtContactNumber)
+        Me.Controls.Add(Me.lblContactNumber)
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.lblClientNumber)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lblName)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "NewClientForm"
         Me.Text = "New Client"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -224,20 +232,20 @@ Partial Class NewClientForm
 
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblName As Label
     Friend WithEvents lblClientNumber As Label
     Friend WithEvents txtName As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents Label8 As Label
+    Friend WithEvents txtContactNumber As TextBox
+    Friend WithEvents lblContactNumber As Label
+    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents lblEmail As Label
+    Friend WithEvents txtDateOfBirth As TextBox
+    Friend WithEvents lblDateOfBirth As Label
+    Friend WithEvents txtPassportNumber As TextBox
+    Friend WithEvents lblPassportNumber As Label
+    Friend WithEvents txtIdNumber As TextBox
+    Friend WithEvents lblIdNumber As Label
+    Friend WithEvents txtSurname As TextBox
+    Friend WithEvents lblSurname As Label
     Friend WithEvents Button1 As Button
 End Class
