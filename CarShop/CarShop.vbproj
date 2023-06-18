@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FinanceCalculatorForm.Designer.vb">
+      <DependentUpon>FinanceCalculatorForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceCalculatorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -100,8 +106,17 @@
     <Compile Include="NewClientForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="QuotesForm.Designer.vb">
+      <DependentUpon>QuotesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="QuotesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FinanceCalculatorForm.resx">
+      <DependentUpon>FinanceCalculatorForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewClientForm.resx">
       <DependentUpon>NewClientForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuotesForm.resx">
+      <DependentUpon>QuotesForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
