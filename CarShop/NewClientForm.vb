@@ -17,7 +17,7 @@
             lblClientNumber.Text = client.ClientNumber
             'open finance calculator:
             MessageBox.Show("New client added")
-            Dim calc = New FinanceCalculatorForm With {
+            Dim calc = New FinanceCalculatorForm(client.ClientNumber) With {
                 .MdiParent = Me.MdiParent
             }
             calc.Show()

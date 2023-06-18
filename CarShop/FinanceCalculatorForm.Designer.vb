@@ -24,7 +24,6 @@ Partial Class FinanceCalculatorForm
     Private Sub InitializeComponent()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblClientID = New System.Windows.Forms.Label()
         Me.lblPurchasePrice = New System.Windows.Forms.Label()
         Me.txtPurchasePrice = New System.Windows.Forms.TextBox()
         Me.txtDeposit = New System.Windows.Forms.TextBox()
@@ -46,6 +45,7 @@ Partial Class FinanceCalculatorForm
         Me.lblBalloonAmount = New System.Windows.Forms.Label()
         Me.lblAmountToFinance = New System.Windows.Forms.Label()
         Me.lblInterestAmt = New System.Windows.Forms.Label()
+        Me.cbClientId = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbBalloon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbInterestRate, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,15 +69,6 @@ Partial Class FinanceCalculatorForm
         Me.Label1.Size = New System.Drawing.Size(59, 16)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Client ID:"
-        '
-        'lblClientID
-        '
-        Me.lblClientID.AutoSize = True
-        Me.lblClientID.Location = New System.Drawing.Point(356, 128)
-        Me.lblClientID.Name = "lblClientID"
-        Me.lblClientID.Size = New System.Drawing.Size(15, 16)
-        Me.lblClientID.TabIndex = 2
-        Me.lblClientID.Text = "[]"
         '
         'lblPurchasePrice
         '
@@ -269,11 +260,21 @@ Partial Class FinanceCalculatorForm
         Me.lblInterestAmt.TabIndex = 23
         Me.lblInterestAmt.Text = "[]"
         '
+        'cbClientId
+        '
+        Me.cbClientId.FormattingEnabled = True
+        Me.cbClientId.Items.AddRange(New Object() {"12", "24", "36", "48", "54", "60", "72", "84", "96"})
+        Me.cbClientId.Location = New System.Drawing.Point(350, 128)
+        Me.cbClientId.Name = "cbClientId"
+        Me.cbClientId.Size = New System.Drawing.Size(160, 24)
+        Me.cbClientId.TabIndex = 24
+        '
         'FinanceCalculatorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1020, 774)
+        Me.Controls.Add(Me.cbClientId)
         Me.Controls.Add(Me.lblInterestAmt)
         Me.Controls.Add(Me.lblAmountToFinance)
         Me.Controls.Add(Me.lblBalloonAmount)
@@ -295,7 +296,6 @@ Partial Class FinanceCalculatorForm
         Me.Controls.Add(Me.lblDeposit)
         Me.Controls.Add(Me.txtPurchasePrice)
         Me.Controls.Add(Me.lblPurchasePrice)
-        Me.Controls.Add(Me.lblClientID)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "FinanceCalculatorForm"
@@ -310,7 +310,6 @@ Partial Class FinanceCalculatorForm
 
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents lblClientID As Label
     Friend WithEvents lblPurchasePrice As Label
     Friend WithEvents txtPurchasePrice As TextBox
     Friend WithEvents txtDeposit As TextBox
@@ -332,4 +331,5 @@ Partial Class FinanceCalculatorForm
     Friend WithEvents lblBalloonAmount As Label
     Friend WithEvents lblAmountToFinance As Label
     Friend WithEvents lblInterestAmt As Label
+    Friend WithEvents cbClientId As ComboBox
 End Class

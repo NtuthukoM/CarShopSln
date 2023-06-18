@@ -2,7 +2,7 @@
 
     Private _QuoteManager As QuoteManager
     Private _Quote As Quote
-    Private _ClientID As String = "MKH00001"
+    Private _ClientID As String = ""
 
     Public Sub New()
 
@@ -23,6 +23,7 @@
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If (ValidateInput() = True) Then
+            _Quote.ClientNumber = cbClientId.Text
             _Quote.BalloonPaymentPerc = lblBalloon.Text
             _Quote.InterestRatePerc = lblInterestRate.Text
             _Quote.PaymentTerm = cbPaymentTerm.Text
@@ -34,8 +35,12 @@
             lblAmountToFinance.Text = "R" + _Quote.RepaymentValue
             lblInterestAmt.Text = "R" + _Quote.InterestAmount
             lblBalloonAmount.ForeColor = Color.Red
-            lblBalloonAmount.Text = String.Format("At the end of the payment term, you will still owe R{0} plus interset.", _Quote.BalloonPayment)
-            btnWriteFile.Enabled = True
+            lblBalloonAmount.Text = String.Format("At the end of the payment term, you will still owe R{0} plus interest.", _Quote.BalloonPayment)
+            If String.IsNullOrEmpty(_Quote.ClientNumber) Then
+                MessageBox.Show("No client selected, cannot save")
+            Else
+                btnWriteFile.Enabled = True
+            End If
         End If
     End Sub
 
@@ -50,7 +55,16 @@
         _Quote = New Quote
         cbPaymentTerm.SelectedIndex = 0
         ResetCalculatedValues()
-        lblClientID.Text = _ClientID
+        Dim clientManager = New ClientManager
+        Dim clientIds = clientManager.GetClientIDs()
+        If clientIds.Count = 0 And Not String.IsNullOrEmpty(_ClientID) Then
+            clientIds.Add(_ClientID)
+            cbClientId.Enabled = False
+        End If
+        cbClientId.DataSource = clientIds
+        If clientIds.Count > 0 Then
+            cbClientId.SelectedIndex = 0
+        End If
     End Sub
 
     Private Sub tbBalloon_Scroll(sender As Object, e As EventArgs) Handles tbBalloon.Scroll

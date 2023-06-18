@@ -12,6 +12,22 @@ Public Class ClientManager
     End Sub
 
 
+    Public Function GetClientIDs() As List(Of String)
+        Dim clientIds As List(Of String) = New List(Of String)
+        If (File.Exists(_ClientFile)) Then
+            Dim fileReader As StreamReader
+            fileReader = New StreamReader(_ClientFile)
+            Dim line As String = ""
+            Do While fileReader.Peek() <> -1 ' Loop until the end of the file is reached
+                line = fileReader.ReadLine()
+                Dim clientId = line.Split(",")(0)
+                clientIds.Add(clientId)
+            Loop
+            fileReader.Close()
+        End If
+        Return clientIds
+    End Function
+
     Private Function GenerateClientNumber(surname As String) As String
         Dim clientNumber As String = surname.Substring(0, 3).ToUpper()
         Dim num As Int32 = ReadMaxNumberFromFile()
